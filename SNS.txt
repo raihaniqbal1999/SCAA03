@@ -170,3 +170,39 @@ d. SNS supports cross-region delivery, but with higher latency
 Answer: b. SNS supports publishing messages to a topic in one region and having subscribers in other regions
 
 Explanation: Amazon SNS supports cross-region delivery, allowing you to publish messages to an SNS topic in one AWS region and have subscribers (e.g., SQS queues) in other regions subscribe to that
+
+What is the purpose of using Amazon SNS in combination with Amazon S3?
+a. To trigger lambda functions when objects are uploaded to S3
+b. To send notifications when objects are uploaded or modified in S3
+c. To encrypt objects stored in S3
+d. To filter objects in S3 based on metadata
+
+Answer: b. To send notifications when objects are uploaded or modified in S3
+Explanation: Amazon SNS can be used in combination with Amazon S3 to send notifications when objects are uploaded or modified in an S3 bucket. S3 can be configured to send events to an SNS topic, which can then fan out those notifications to various subscribers (e.g., SQS queues, Lambda functions, HTTP endpoints) for further processing or actions.
+
+Which of the following is a secure way to transmit messages between publishers and Amazon SNS?
+a. Using HTTPS for API operations
+b. Using SNS message encryption
+c. Using AWS PrivateLink
+d. All of the above
+
+Answer: d. All of the above
+Explanation: Amazon SNS provides several mechanisms for securing communication between publishers and SNS. These include using HTTPS for API operations, enabling SNS message encryption, and using AWS PrivateLink for private connectivity between AWS services and on-premises resources.
+
+What is the maximum message size that can be sent to Amazon SNS?
+a. 64 KB
+b. 256 KB
+c. 1 MB
+d. 5 MB
+
+Answer: b. 256 KB
+Explanation: The maximum message size that can be sent to Amazon SNS is 256 KB. If you need to send larger messages, you can store the message content in an Amazon S3 bucket and send a reference to the S3 object in the SNS notification.
+
+Which of the following statements is true about Amazon SNS and message durability?
+a. SNS messages are stored indefinitely until they are delivered
+b. SNS messages are stored for a maximum of 14 days
+c. SNS messages are not stored and are delivered immediately
+d. SNS message durability depends on the type of subscriber
+
+Answer: c. SNS messages are not stored and are delivered immediately
+Explanation: Amazon SNS is a notification service and does not store messages. Messages published to an SNS topic are delivered immediately to all subscribers. If a subscriber is not available or experiences a delivery failure, SNS does not attempt to redeliver the message. For durable messaging, you can use Amazon SNS in conjunction with Amazon SQS or other messaging systems that provide message storage and delivery guarantees.
