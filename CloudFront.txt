@@ -1,0 +1,159 @@
+Question: What is the primary purpose of Amazon CloudFront?
+a) To provide high-performance computing resources
+b) To distribute content with low latency and high data transfer speeds
+c) To manage DNS records for websites
+d) To store and retrieve objects in the cloud
+Answer: b) To distribute content with low latency and high data transfer speeds
+Explanation: The article states that "CloudFront is a web service that gives businesses and web application developers an easy and cost-effective way to distribute content with low latency and high data transfer speeds."
+
+Question: Which of the following is NOT a valid origin for CloudFront distributions?
+a) Amazon S3 bucket
+b) Amazon EC2 instance
+c) Amazon RDS database
+d) On-premises web server
+Answer: c) Amazon RDS database
+Explanation: The article mentions that origins can be "an S3 bucket, an EC2 instance, an Elastic Load Balancer, or Route 53 – can also be external (non-AWS)." It does not list Amazon RDS as a valid origin.
+
+Question: What is the purpose of a Regional Edge Cache in CloudFront?
+a) To store user session data
+b) To cache content closer to users and improve cache hit rates
+c) To handle dynamic content directly
+d) To process PUT, POST, PATCH, OPTIONS, and DELETE requests
+Answer: b) To cache content closer to users and improve cache hit rates
+Explanation: The article states that "Regional Edge Caches are located between origin web servers and global edge locations and have a larger cache" and "Regional Edge caches aim to get content closer to users."
+
+Question: Which type of CloudFront distribution is required for streaming media files using Adobe Flash Media Server's RTMP protocol?
+a) Web Distribution
+b) RTMP Distribution
+c) Dynamic Distribution
+d) Lambda Distribution
+Answer: b) RTMP Distribution
+Explanation: The article mentions that "RTMP: Distribute streaming media files using Adobe Flash Media Server's RTMP protocol."
+
+Question: What is the purpose of an Origin Access Identity (OAI) in CloudFront?
+a) To enable HTTPS for your distribution
+b) To restrict direct access to your S3 bucket
+c) To enable geo-blocking
+d) To configure cache behaviors
+Answer: b) To restrict direct access to your S3 bucket
+Explanation: The article states that "An origin access identity (OAI) is a special CloudFront user that is associated with the distribution" and it's used to "restrict users so they cannot access the content directly using the S3 URL, they must connect via CloudFront."
+
+Question: Which AWS service can be used with CloudFront to monitor HTTP and HTTPS requests and control access to content?
+a) AWS IAM
+b) AWS WAF
+c) AWS Shield
+d) AWS GuardDuty
+Answer: b) AWS WAF
+Explanation: The article mentions that "AWS WAF is a web application firewall that lets you monitor HTTP and HTTPS requests that are forwarded to CloudFront and lets you control access to your content."
+
+Question: What is the purpose of Lambda@Edge in CloudFront?
+a) To analyze access logs
+b) To configure cache behaviors
+c) To customize content delivery based on request attributes
+d) To enable RTMP streaming
+Answer: c) To customize content delivery based on request attributes
+Explanation: The article states that "Lambda@Edge lets you run Node.js and Python Lambda functions to customize content that CloudFront delivers" and can be used for tasks like "inspect cookies and rewrite URLs to perform A/B testing" or "send specific objects to your users based on the User-Agent header."
+
+Question: What is the default cache duration (TTL) for objects in CloudFront?
+a) 1 hour
+b) 12 hours
+c) 24 hours
+d) 7 days
+Answer: c) 24 hours
+Explanation: The article mentions that "Objects are cached for 24 hours by default."
+
+Question: Which of the following is NOT a way to improve the cache hit ratio in CloudFront?
+a) Use the Cache-Control max-age directive
+b) Use Origin Shield
+c) Enable field-level encryption
+d) Forward only specific cookies instead of all cookies
+Answer: c) Enable field-level encryption
+Explanation: The article lists several methods to improve cache hit ratio, including using Cache-Control max-age, Origin Shield, and forwarding specific cookies. Field-level encryption is mentioned as a security feature, not a cache optimization technique.
+
+Question: What is the purpose of CloudFront signed URLs and signed cookies?
+a) To encrypt content at the edge
+b) To control access to restricted content
+c) To enable geo-blocking
+d) To configure cache behaviors
+Answer: b) To control access to restricted content
+Explanation: The article states that "A signed URL includes additional information, for example, an expiration date and time, that gives you more control over access to your content" and "CloudFront signed cookies allow you to control who can access your content when you don't want to change your current URLs."
+
+Question: Which of the following statements about CloudFront and dynamic content is true?
+a) Dynamic content is never cached by CloudFront
+b) Dynamic content is cached but bypasses Regional Edge Caches
+c) Dynamic content is treated the same as static content
+d) Dynamic content is only served through RTMP distributions
+Answer: b) Dynamic content is cached but bypasses Regional Edge Caches
+Explanation: The article states that "Dynamic content is cached" but also mentions that "Dynamic content goes straight to the origin and does not flow through Regional Edge caches."
+
+Question: In a high-availability setup with CloudFront origin failover, what determines when CloudFront switches to the secondary origin?
+a) When the primary origin's health check fails
+b) When the cache hit ratio drops below a certain threshold
+c) When the primary origin returns specific HTTP status code failure responses
+d) When the number of requests to the primary origin exceeds a limit
+Answer: c) When the primary origin returns specific HTTP status code failure responses
+Explanation: The article mentions that in origin failover, "CloudFront automatically switches to when the primary origin returns specific HTTP status code failure responses."
+
+Question: Which of the following combinations is required to serve both a media player and its media files using CloudFront?
+a) Two web distributions
+b) One web distribution and one RTMP distribution
+c) Two RTMP distributions
+d) One distribution with both web and RTMP cache behaviors
+Answer: b) One web distribution and one RTMP distribution
+Explanation: The article states that "For serving both the media player and media files you need two types of distributions: A web distribution for the media player, and an RTMP distribution for the media files."
+
+Question: What is the purpose of field-level encryption in CloudFront?
+a) To encrypt all content delivered by CloudFront
+b) To encrypt only the media files in an RTMP distribution
+c) To protect specific data so it's only visible to certain applications
+d) To enable end-to-end encryption for Lambda@Edge functions
+Answer: c) To protect specific data so it's only visible to certain applications
+Explanation: The article explains that "Field-level encryption allows you to securely upload user-submitted sensitive information to your web servers. The sensitive information is encrypted at the edge closer to the user and remains encrypted throughout application processing."
+
+Question: When using CloudFront with a custom origin that's an Amazon EC2 instance, what does Amazon recommend?
+a) Use a NAT gateway to handle traffic
+b) Use an AMI with a pre-installed web server and an ELB
+c) Use a single t2.micro instance for cost-effectiveness
+d) Use CloudFront signed URLs for all requests
+Answer: b) Use an AMI with a pre-installed web server and an ELB
+Explanation: The article recommends for EC2 custom origins: "Use an AMI that automatically installs the software for a web server. Use ELB to handle traffic across multiple EC2 instances. Specify the URL of your load balancer as the domain name of the origin server."
+
+Question: How does CloudFront handle caching when viewers request content using both HTTP and HTTPS?
+a) It caches separately for HTTP and HTTPS
+b) It only caches HTTPS requests for security
+c) It caches the object once, regardless of the protocol
+d) It always redirects HTTP to HTTPS before caching
+Answer: c) It caches the object once, regardless of the protocol
+Explanation: The article states: "CloudFront caches the object once even if viewers make requests using HTTP and HTTPS."
+
+Question: Which of the following is NOT a default metric provided by CloudFront at no additional cost?
+a) Total number of viewer requests
+b) Bytes downloaded by viewers
+c) Origin latency
+d) 5xx error rate
+Answer: c) Origin latency
+Explanation: The article lists several default metrics, including requests, bytes downloaded, and error rates. However, it states that "Origin latency" is one of the additional metrics that "must be enabled for each distribution separately" and comes at an additional cost.
+
+Question: When using Amazon S3 as a custom origin for CloudFront, what specific type of S3 endpoint should be used?
+a) S3 REST API endpoint
+b) S3 website endpoint
+c) S3 access point endpoint
+d) S3 VPC endpoint
+Answer: b) S3 website endpoint
+Explanation: The article mentions that for an "S3 static website: Enter the S3 static website hosting endpoint for your bucket in the configuration. Example: http://<bucketname>.s3-website-<region>.amazonaws.com."
+
+Question: Which of the following scenarios is best suited for using CloudFront signed URLs instead of signed cookies?
+a) Providing access to all files in a subscriber area
+b) Restricting access to a single file download
+c) Avoiding changes to current URLs
+d) Serving content to web browsers only
+Answer: b) Restricting access to a single file download
+Explanation: The article advises: "Use signed URLs when you want to restrict access to individual files, for example, an installation download for your application."
+
+Question: What is the impact of invalidating an object in CloudFront before its TTL expires?
+a) It's free and helps maintain data consistency
+b) It incurs a charge and immediately removes the object from all caches
+c) It's not possible; you must wait for the TTL to expire
+d) It only affects the Regional Edge Caches, not the edge locations
+Answer: b) It incurs a charge and immediately removes the object from all caches
+Explanation: The article states: "Invalidation can be used to immediately revoke cached objects – chargeable." This implies that invalidation overrides the TTL, removes the object from caches, but comes with a cost.
