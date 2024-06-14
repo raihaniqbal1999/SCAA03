@@ -1,0 +1,51 @@
+#Just contains questions on Cname vs alias with explainationsSure, here are some tough MCQ questions on CNAME vs Alias records in Amazon Route 53, along with answers and explanations:
+
+1. Which of the following statements is true about CNAME records in Route 53?
+a) CNAME records can be used to map a DNS name to an AWS resource, such as an ELB load balancer
+b) CNAME records can be used for the root domain (example.com)
+c) CNAME records can be used to map a DNS name to another DNS name within the same hosted zone
+d) CNAME records can be used with Route 53 Latency-based routing
+
+Answer: c) CNAME records can be used to map a DNS name to another DNS name within the same hosted zone.
+
+Explanation: A CNAME record in Route 53 can be used to map a DNS name (subdomain) to another DNS name within the same hosted zone. However, CNAME records cannot be used for the root domain (example.com), and they cannot be used to map a DNS name directly to an AWS resource like an ELB load balancer. CNAME records also cannot be used with Route 53's Latency-based routing policy.
+
+2. Which of the following routing policies in Route 53 support the use of Alias records?
+a) Simple routing
+b) Weighted routing
+c) Latency-based routing
+d) All of the above
+
+Answer: a) Simple routing, b) Weighted routing, d) Geolocation routing.
+
+Explanation: Alias records in Route 53 can be used with Simple routing, Weighted routing, and Geolocation routing policies. However, Alias records cannot be used with Latency-based routing, as Latency-based routing requires the use of IP addresses, and Alias records are designed to map DNS names to AWS resources without the need for IP address mapping.
+
+3. You have an Amazon S3 bucket configured for static website hosting, and you want to map your root domain (example.com) to the S3 website endpoint. Which type of record should you use in Route 53?
+a) CNAME record
+b) Alias record
+c) A record
+d) Both CNAME and Alias records can be used
+
+Answer: b) Alias record.
+
+Explanation: To map the root domain (example.com) to an S3 bucket configured for static website hosting, you should use an Alias record in Route 53. CNAME records cannot be used for the root domain, as they can only be used for subdomains. An A record is not suitable for this case, as it requires mapping to an IP address, and S3 website endpoints are not associated with static IP addresses.
+
+4. You have an Elastic Load Balancing (ELB) load balancer that serves traffic for your web application. You want to map a subdomain (www.example.com) to the ELB load balancer. Which type of record should you use in Route 53?
+a) CNAME record
+b) Alias record
+c) Both CNAME and Alias records can be used
+d) Neither CNAME nor Alias records can be used
+
+Answer: b) Alias record.
+
+Explanation: To map a subdomain (www.example.com) to an ELB load balancer, you should use an Alias record in Route 53. Alias records are designed to map DNS names to AWS resources like ELB load balancers, without the need for IP address mapping. While CNAME records can be used for subdomains, they are not recommended for mapping to AWS resources, as they can lead to potential issues with failover and load balancing.
+
+5. Which of the following statements is true about Alias records in Route 53?
+a) Alias records can have a custom Time-to-Live (TTL) value
+b) Alias records always have a TTL (Time-to-Live) value of 60 seconds
+c) Alias records do not have a TTL (Time-to-Live) value
+d) Alias records can have a TTL value, but it is not configurable
+
+Answer: c) Alias records do not have a TTL (Time-to-Live) value.
+
+Explanation: Alias records in Route 53 do not have a Time-to-Live (TTL) value. The TTL value is used to control how long a DNS record is cached by resolvers and clients. Since Alias records are mappings to AWS resources, the TTL is managed by Route 53 automatically, and there is no need to configure a TTL value.
