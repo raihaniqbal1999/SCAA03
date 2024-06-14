@@ -1,3 +1,6 @@
+CNAME records in Route 53 have a configurable TTL value, which you can set when creating or updating the record.
+Alias records in Route 53 do not have a configurable TTL value, as the TTL is managed automatically by Route 53 for optimal performance and reliability.
+
 #Just contains questions on Cname vs alias with explainationsSure, here are some tough MCQ questions on CNAME vs Alias records in Amazon Route 53, along with answers and explanations:
 
 1. Which of the following statements is true about CNAME records in Route 53?
