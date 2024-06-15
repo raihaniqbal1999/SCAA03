@@ -1,0 +1,108 @@
+### Geo-Location Routing Policy
+
+**Geo-Location Routing Policy** allows you to choose the resources that serve your traffic based on the geographic location from which the DNS queries originate. This policy helps in serving localized content, adhering to regional laws and regulations, and enhancing performance by directing traffic to the nearest regional resource.
+
+- **Example Use Case**: You want users in Europe to be directed to your European servers, and users in the USA to be directed to your US servers.
+
+### Geo-Proximity Routing Policy
+
+**Geo-Proximity Routing Policy** allows you to route traffic based on the geographic location of your resources and, optionally, shift traffic from resources in one location to resources in another. You can specify an endpoint's geographic coordinates and use a bias value to expand or shrink the size of the geographic region from which traffic is routed to the endpoint.
+
+- **Example Use Case**: You have resources in multiple regions, and you want to route traffic to the closest resources, but with the flexibility to adjust traffic based on current load or capacity.
+
+### Latency-Based Routing Policy
+
+**Latency-Based Routing Policy** routes traffic to the AWS region that provides the lowest latency. This helps in reducing the response time by directing users to the region where the application can be served with the minimal delay.
+
+- **Example Use Case**: You have a global application, and you want to ensure that users are directed to the region that offers the fastest response time based on network latency.
+
+### Key Differences
+
+- **Geo-Location vs. Geo-Proximity**:
+  - **Geo-Location**: Directs traffic based on the location of the DNS query origin.
+  - **Geo-Proximity**: Directs traffic based on the location of resources, with optional biasing to adjust routing.
+
+- **Geo-Location vs. Latency-Based**:
+  - **Geo-Location**: Uses the geographic origin of the DNS query.
+  - **Latency-Based**: Uses network performance metrics to direct traffic to the region with the lowest latency.
+
+- **Geo-Proximity vs. Latency-Based**:
+  - **Geo-Proximity**: Focuses on the geographic distance to resources, with flexibility for biasing.
+  - **Latency-Based**: Focuses on network latency to the resources.
+
+### Multiple-Choice Questions (MCQs)
+
+#### Question 1
+Which routing policy should be used if you want to direct traffic to the nearest resource while allowing for traffic bias adjustments?
+
+A) Geo-Location Routing
+
+B) Geo-Proximity Routing
+
+C) Latency-Based Routing
+
+D) Weighted Routing
+
+**Answer: B) Geo-Proximity Routing**
+
+**Explanation**: Geo-Proximity Routing allows you to route traffic based on the location of resources and to adjust the routing through biasing, making it the best choice for this scenario.
+
+#### Question 2
+What is the primary factor used by the Latency-Based Routing policy to direct traffic?
+
+A) Geographic origin of the DNS query
+
+B) Resource geographic coordinates
+
+C) Network performance metrics
+
+D) Predefined traffic weights
+
+**Answer: C) Network performance metrics**
+
+**Explanation**: Latency-Based Routing uses network performance metrics to determine which region provides the lowest latency for directing traffic.
+
+#### Question 3
+If you need to comply with regional content regulations and serve users based on their country, which routing policy should you choose?
+
+A) Geo-Location Routing
+
+B) Geo-Proximity Routing
+
+C) Latency-Based Routing
+
+D) Simple Routing
+
+**Answer: A) Geo-Location Routing**
+
+**Explanation**: Geo-Location Routing allows you to serve traffic based on the geographic origin of the DNS query, which helps in complying with regional regulations and serving localized content.
+
+#### Question 4
+Which routing policy would you use to ensure users are always directed to the AWS region with the fastest response time?
+
+A) Geo-Location Routing
+
+B) Geo-Proximity Routing
+
+C) Latency-Based Routing
+
+D) Failover Routing
+
+**Answer: C) Latency-Based Routing**
+
+**Explanation**: Latency-Based Routing ensures that users are directed to the region with the lowest network latency, providing the fastest response time.
+
+#### Question 5
+How does Geo-Proximity Routing differ from Geo-Location Routing?
+
+A) Geo-Proximity Routing directs traffic based on DNS query origin, while Geo-Location Routing directs based on resource location.
+
+B) Geo-Proximity Routing directs traffic based on resource location and allows biasing, while Geo-Location Routing directs based on DNS query origin.
+
+C) Geo-Proximity Routing uses network latency, while Geo-Location Routing uses geographic coordinates.
+
+D) Geo-Proximity Routing is used for failover scenarios, while Geo-Location Routing is used for load balancing.
+
+**Answer: B) Geo-Proximity Routing directs traffic based on resource location and allows biasing, while Geo-Location Routing directs based on DNS query origin.**
+
+**Explanation**: Geo-Proximity Routing considers the location of resources and allows for bias adjustments, whereas Geo-Location Routing directs traffic based on the geographic origin of the DNS query.
