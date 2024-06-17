@@ -1,0 +1,44 @@
+Which statement best describes the purpose of API Gateway in AWS?
+
+a. API Gateway is a service that allows you to create and manage APIs.
+b. API Gateway is a service that allows you to create and manage Serverless applications.
+c. API Gateway is a service that allows you to create and manage APIs and Serverless applications.
+d. All of the above.
+Answer: d. All of the above.
+Explanation: API Gateway is a service that allows you to create and manage APIs and Serverless applications. The article mentions that "API Gateway allows you to version your APIs, enabling you to introduce changes or updates without affecting existing clients."
+
+Which of the following is not a valid way to create an API in API Gateway?
+
+a. Using Swagger or OpenAPI specifications
+b. Using the API Gateway console
+c. Using the API Gateway import REST API feature
+d. Using the API Gateway import Serverless application feature
+Answer: d. Using the API Gateway import Serverless application feature
+Explanation: The term "Serverless application" refers to applications that do not require servers to be managed, which is not a valid way to create an API in API Gateway.
+
+What is the significance of the term "Serverless" in the context of API Gateway?
+
+a. It refers to the ability to create and manage APIs without servers.
+b. It refers to the ability to create and manage APIs without provisioning or managing servers.
+c. It refers to the ability to create and manage APIs without any additional resources.
+d. All of the above.
+Answer: b. It refers to the ability to create and manage APIs without provisioning or managing servers.
+Explanation: The term "Serverless" in the context of API Gateway refers to the ability to create and manage APIs without provisioning or managing servers.
+
+Which of the following statements accurately describes the significance of the term "Serverless" in the context of API Gateway?
+
+a. Serverless refers to the ability to create and manage APIs without provisioning or managing servers.
+b. Serverless refers to the ability to create and manage APIs without provisioning or managing servers, but with provisioning or managing servers.
+c. Both a and b.
+d. None of the above.
+Answer: a. Serverless refers to the ability to create and manage APIs without provisioning or managing servers.
+Explanation: The term "Serverless" in the context of API Gateway refers to the ability to create and manage APIs without provisioning or managing servers.
+
+Which of the following statements is true regarding the term "Serverless" in the context of API Gateway?
+
+a. Serverless refers to the ability to create and manage APIs without provisioning or managing servers.
+b. Serverless refers to the ability to create and manage APIs without provisioning or managing servers, with provisioning or managing servers.
+c. Both a and b are true statements.
+d. None of the above.
+Answer: c. Both a and b are true statements.
+Explanation: Both statements "Serverless refers to the ability to create and manage APIs without provisioning or managing servers" and "Serverless refers to the ability to create and manage APIs without provisioning or managing servers, with provisioning or managing servers" are true statements in the context of "Serverless" in API Gateway.
