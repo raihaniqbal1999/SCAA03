@@ -42,3 +42,48 @@ c. Both a and b are true statements.
 d. None of the above.
 Answer: c. Both a and b are true statements.
 Explanation: Both statements "Serverless refers to the ability to create and manage APIs without provisioning or managing servers" and "Serverless refers to the ability to create and manage APIs without provisioning or managing servers, with provisioning or managing servers" are true statements in the context of "Serverless" in API Gateway.
+
+Which of the following is a valid endpoint type in Amazon API Gateway?
+a. Edge-Optimized
+b. Regional
+c. Private
+d. All of the above
+
+Answer: d. All of the above
+Explanation: The article mentions three endpoint types in Amazon API Gateway: Edge-Optimized (default), Regional, and Private. The Edge-Optimized endpoint is suitable for serving clients globally, the Regional endpoint is designed for clients within the same AWS region, and the Private endpoint can only be accessed from within a VPC using an interface VPC endpoint.
+
+Which endpoint type is suitable for serving clients globally in Amazon API Gateway?
+a. Edge-Optimized
+b. Regional
+c. Private
+d. None of the above
+
+Answer: a. Edge-Optimized
+Explanation: The article states that the Edge-Optimized endpoint type "is the default configuration and is suitable for serving clients globally. Requests are routed through CloudFront edge locations, which helps improve latency for users around the world."
+
+Which of the following statements about the Regional endpoint type in Amazon API Gateway is true?
+a. It is designed for clients within the same AWS region as the API Gateway.
+b. It involves CloudFront by default for content delivery.
+c. It can only be accessed from within a VPC using an interface VPC endpoint.
+d. None of the above.
+
+Answer: a. It is designed for clients within the same AWS region as the API Gateway.
+Explanation: The article mentions that the "Regional endpoint type is designed for clients within the same AWS region as the API Gateway. It doesn't involve CloudFront by default, but you can manually configure CloudFront in front of a regional endpoint for more control over caching strategies and distribution."
+
+What is the purpose of the Private endpoint type in Amazon API Gateway?
+a. To restrict access to the API to resources within a Virtual Private Cloud (VPC)
+b. To serve clients globally with low latency
+c. To provide more control over caching strategies and distribution
+d. None of the above
+
+Answer: a. To restrict access to the API to resources within a Virtual Private Cloud (VPC)
+Explanation: The article states that "Private endpoints are used when you want to restrict access to your API to resources within your Virtual Private Cloud. Requests are allowed only from within the VPC using an interface VPC endpoint (Network Load Balancer)."
+
+Which of the following statements about securing APIs with custom domain names in Amazon API Gateway is true?
+a. HTTPS security is automatically enabled when using a custom domain name.
+b. HTTPS security can be enabled by integrating with AWS Certificate Manager (ACM) and setting up a custom domain name.
+c. Custom domain names are only supported for Edge-Optimized endpoints.
+d. Custom domain names are not supported in Amazon API Gateway.
+
+Answer: b. HTTPS security can be enabled by integrating with AWS Certificate Manager (ACM) and setting up a custom domain name.
+Explanation: The article mentions that "securing your API with HTTPS through ACM and using custom domain names helps ensure the confidentiality and integrity of the communication between clients and your API."
