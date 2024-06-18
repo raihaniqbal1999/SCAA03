@@ -1,0 +1,56 @@
+## AWS Cognito MCQ Questions (Solutions Architect Exam Focus)
+
+**1. You are building a mobile app that requires social login functionality. Which AWS service would be the MOST appropriate choice to implement this feature?**
+
+  * A. Amazon IAM
+  * B. AWS WAF
+  * C. AWS Cognito User Pools **(CORRECT)**
+  * D. AWS CloudFront
+
+**Explanation:**  AWS Cognito User Pools offer social login functionality by integrating with various Identity Providers (IdPs) like Facebook, Google, and Amazon itself. This allows users to sign in to your app using their existing social media credentials.
+
+**2. Your company is developing a new web application that requires user authentication with strong password policies and the ability to access AWS resources like S3 buckets. Which combination of AWS services would best achieve this?**
+
+  * A. Amazon IAM only
+  * B. AWS Cognito User Pools only
+  * C. AWS Cognito User Pools and Amazon S3 **(Partially Correct)**
+  * D. AWS Cognito User Pools and AWS Cognito Identity Pools **(CORRECT)**
+
+**Explanation:** While User Pools manage user authentication, they cannot directly grant access to AWS resources.  The combination of User Pools for authentication and Identity Pools for issuing temporary AWS credentials provides the necessary functionality.
+
+**3. You are designing a mobile game with public features accessible without login and limited features requiring user authentication. Which AWS Cognito feature would be most useful in this scenario?**
+
+  * A. Multi-factor Authentication (MFA)
+  * B. Social Login
+  * C. User Migration
+  * D. Guest Users **(CORRECT)**
+
+**Explanation:**  AWS Cognito Identity Pools allow you to configure guest users. This enables you to provide limited functionality to users even before they sign in, making it ideal for your mobile game with public features.
+
+**4. You are concerned about the scalability of your user authentication system as your user base grows.  Which AWS Cognito feature addresses this concern?**
+
+  * A. Custom user attributes
+  * B. Social sign-in with Facebook
+  * C. User migration between directories
+  * D. User pool scaling **(CORRECT)**
+
+**Explanation:**  AWS Cognito User Pools are designed to handle a large number of users. They automatically scale to accommodate your growing user base without requiring any manual intervention.
+
+**5.  A client wants to implement two-factor authentication (MFA) for their user login process.  Which AWS Cognito service can achieve this?**
+
+  * A. AWS Identity and Access Management (IAM)
+  * B. AWS Cognito User Pools **(CORRECT)**
+  * C. AWS Cognito Identity Pools
+  * D. AWS WAF
+
+**Explanation:**  AWS Cognito User Pools offer multi-factor authentication (MFA) as a security feature. This adds an extra layer of protection during the login process by requiring a secondary verification code in addition to the username and password.
+
+
+**Bonus Question - Practical Use Case:**
+
+A social media platform wants to implement user authentication with social login options and allow users to upload photos to a secure S3 bucket. Here's how AWS Cognito can be used:
+
+1. **User Authentication:**  Use Cognito User Pools to manage user registration, login, and password management. Users can also sign in with social media accounts through social login functionality.
+2. **Secure Photo Upload:** Implement Cognito Identity Pools to provide temporary AWS credentials to authenticated users. These credentials allow users to upload photos directly to a private S3 bucket with appropriate access control policies in place.
+
+This ensures secure user authentication and controlled access to the S3 storage for photo uploads.
